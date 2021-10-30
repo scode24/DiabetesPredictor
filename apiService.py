@@ -31,5 +31,4 @@ def predict():
     return 'diabetic'
 
 
-port = int(os.environ.get("PORT", 5001))
-app.run(host='0.0.0.0', port=port)
+app.run(debug='false', host='0.0.0.0')
