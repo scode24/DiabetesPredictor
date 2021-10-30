@@ -31,4 +31,4 @@ def predict():
     return 'diabetic'
 
 
-app.run(debug='false', host='0.0.0.0')
+app.run(debug=False, host='0.0.0.0')
