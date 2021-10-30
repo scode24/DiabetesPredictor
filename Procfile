@@ -1,1 +1,1 @@
-web: gunicorn apiService: app
+web: gunicorn --bind :8000 apiService: app
