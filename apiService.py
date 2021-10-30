@@ -30,4 +30,4 @@ def predict():
     return 'diabetic'
 
 
-app.run()
+app.run(port=9000)
