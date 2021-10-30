@@ -2,7 +2,7 @@ from flask import Flask, request
 import pandas as pd
 from sklearn import svm
 
-app = Flask(__name__)
+app = Flask()
 
 
 @app.route('/predict', methods=['POST', 'GET'])
