@@ -1,6 +1,7 @@
 from flask import Flask, request
 import pandas as pd
 from sklearn import svm
+import os
 
 app = Flask(__name__)
 
@@ -25,9 +26,10 @@ def predict():
     svc = svm.SVC(kernel='linear')
     svc.fit(x, y)
     prediction = svc.predict(input)
-    if(predict == [0]):
+    if(prediction == [0]):
         return 'not_diabetic'
     return 'diabetic'
 
 
-app.run(port=9000)
+port = int(os.environ.get("PORT", 5000))
+app.run(host='0.0.0.0', port=port)
